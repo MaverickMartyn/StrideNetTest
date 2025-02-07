@@ -1,0 +1,51 @@
+!SceneAsset
+Id: 5dc74e35-0255-41c8-8f1e-19df8b7d307f
+SerializedVersion: {Stride: 3.1.0.1}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootParts:
+        - ref!! a44aab04-049b-499a-a1a4-76ce31f577f3
+        - ref!! e835f392-040c-485e-ba8b-ef81c8479eca
+    Parts:
+        -   Entity:
+                Id: a44aab04-049b-499a-a1a4-76ce31f577f3
+                Name: Camera
+                Components:
+                    35d62b1eee005ea8abace47dbb10890c: !TransformComponent
+                        Id: 8eedcd06-2c0b-48d6-83a7-6a288a089c66
+                        Position: {X: 0.0, Y: 0.0, Z: 1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    6f123574e9252dbc4c1a377e27d8fbec: !CameraComponent
+                        Id: 2b026efd-f192-446e-a663-9d7bf19588f9
+                        Name: null
+                        Projection: Orthographic
+                        Slot: 181d1b0f-e78a-4c32-9340-2559fe3a4a91
+        -   Entity:
+                Id: e835f392-040c-485e-ba8b-ef81c8479eca
+                Name: Network
+                Components:
+                    d9edaa8332d8093e91fb9e63902fce25: !TransformComponent
+                        Id: 3028f6ba-2e2b-46eb-b137-eae6b6ae7f16
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    56279778d66a1d10e087cb93747290ff: !StrideNet.NetworkManager,StrideNet
+                        Id: 9c9fb8db-b306-4411-a8c3-9f293b4a5dce
+                        Priority: 1
+                        Adress: 127.0.0.1
+                        Port: 3000
+                        MaxPlayersCount: 10
+                    09cb75314f4519a12f04df2894e27ae5: !StrideNet.NetworkSpawner,StrideNet
+                        Id: 3a34ec50-5e5e-4f8a-b64c-3c926cae54c8
+                        SpawnablePrefabs:
+                            1a03d2ee4cae82f57ea13f0af37f3c37: ca972857-e842-4b78-a77b-fd64aa8ebf46:Player
+                    24809bd474e11b3c4b9c3a8cf029d1a5: !StrideNetTest.GameStartup,StrideNetTest
+                        Id: f8536069-844e-464b-af4d-797156eea858
+                        NetworkManager: ref!! 9c9fb8db-b306-4411-a8c3-9f293b4a5dce
+                        Spawner: ref!! 3a34ec50-5e5e-4f8a-b64c-3c926cae54c8
+                        PlayerPrefab: ca972857-e842-4b78-a77b-fd64aa8ebf46:Player
