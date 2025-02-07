@@ -7,7 +7,7 @@ ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 Packing: {}
 Sprites:
     793cd4be936e6d4b7c7bee078bba77cd:
-        Source: !file D:/source/StrideNet/Sample/Assets/stride.png
+        Source: !file ../Resources/stride.png
         Name: stride
         TextureRegion: {X: 0, Y: 0, Width: 256, Height: 256}
         Center: {X: 0.0, Y: 0.0}

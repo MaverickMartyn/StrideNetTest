@@ -8,10 +8,10 @@ Defaults:
     - !Stride.Audio.AudioEngineSettings,Stride.Audio
         HrtfSupport: false
     - !Stride.Assets.EditorSettings,Stride.Assets
-        RenderingMode: HDR
+        RenderingMode: LDR
     - !Stride.Graphics.RenderingSettings,Stride.Graphics
-        DefaultBackBufferWidth: 1280
-        DefaultBackBufferHeight: 720
+        DefaultBackBufferWidth: 800
+        DefaultBackBufferHeight: 600
         AdaptBackBufferToScreen: false
         DefaultGraphicsProfile: Level_10_0
         ColorSpace: Linear
